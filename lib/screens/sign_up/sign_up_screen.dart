@@ -30,7 +30,7 @@ class SignUpScreen extends StatelessWidget {
               ),
               Gaps.v20,
               Text(
-                "Create a portflio, follow other accounts, make your own bideos, and more.",
+                "Create a portfolio, follow other accounts, make your own videos, and more.",
                 style: TextStyle(fontSize: Sizes.size16, color: Colors.black45),
                 textAlign: TextAlign.center,
               ),
