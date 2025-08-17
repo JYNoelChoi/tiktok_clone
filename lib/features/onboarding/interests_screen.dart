@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 import 'package:tiktok_clone/features/authentication/widgets/interest_button.dart';
+import 'package:tiktok_clone/features/onboarding/tutorial_screen.dart';
 
 const interests = [
   "Daily Life",
@@ -67,6 +68,12 @@ class _InterestsScreenState extends State<InterestsScreen> {
         _showTitle = false;
       });
     }
+  }
+
+  void _onNextTap() {
+    Navigator.of(
+      context,
+    ).push(MaterialPageRoute(builder: (context) => TutorialScreen()));
   }
 
   @override
@@ -143,21 +150,24 @@ class _InterestsScreenState extends State<InterestsScreen> {
               left: Sizes.size24,
               right: Sizes.size24,
             ),
-            child: Container(
-              padding: EdgeInsets.symmetric(
-                vertical: Sizes.size16 + Sizes.size2,
-              ),
-              decoration: BoxDecoration(
-                // border: BoxBorder.all(color: Colors.black),
-                color: Theme.of(context).primaryColor,
-              ),
-              child: const Text(
-                "Next",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: Sizes.size16,
-                  fontWeight: FontWeight.w500,
+            child: GestureDetector(
+              onTap: _onNextTap,
+              child: Container(
+                padding: EdgeInsets.symmetric(
+                  vertical: Sizes.size16 + Sizes.size2,
+                ),
+                decoration: BoxDecoration(
+                  // border: BoxBorder.all(color: Colors.black),
+                  color: Theme.of(context).primaryColor,
+                ),
+                child: const Text(
+                  "Next",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: Sizes.size16,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
             ),
