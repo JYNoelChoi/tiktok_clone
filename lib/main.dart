@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tiktok_clone/common/widgets/main_navigation/main_navigation_screen.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
-import 'package:tiktok_clone/features/onboarding/interests_screen.dart';
 
 void main() {
   runApp(const TikTokApp());
@@ -30,7 +30,7 @@ class TikTokApp extends StatelessWidget {
       ),
       // TODO: Just to facilitate working on specific screen. To restore later.
       // home: SignUpScreen(),
-      home: InterestsScreen(),
+      home: MainNavigationScreen(),
     );
   }
 }
