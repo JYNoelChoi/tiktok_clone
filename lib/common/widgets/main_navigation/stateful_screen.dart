@@ -19,7 +19,6 @@ class _StatefulScreenState extends State<StatefulScreen> {
 
   @override
   void dispose() {
-    // print("clicks:$_clicks");
     super.dispose();
   }
 
