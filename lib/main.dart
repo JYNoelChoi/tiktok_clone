@@ -3,6 +3,7 @@ import 'package:tiktok_clone/common/widgets/main_navigation/main_navigation_scre
 import 'package:tiktok_clone/constants/sizes.dart';
 
 void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
   runApp(const TikTokApp());
 }
 
