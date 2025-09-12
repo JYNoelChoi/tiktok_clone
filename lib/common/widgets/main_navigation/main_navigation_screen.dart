@@ -27,7 +27,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) =>
-            Scaffold(appBar: AppBar(title: Text("Record video"))),
+            Scaffold(appBar: AppBar(title: const Text("Record video"))),
         fullscreenDialog: true,
       ),
     );
@@ -39,8 +39,14 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
       backgroundColor: _selectedIndex == 0 ? Colors.black : Colors.white,
       body: Stack(
         children: [
-          Offstage(offstage: _selectedIndex != 0, child: VideoTimelineScreen()),
-          Offstage(offstage: _selectedIndex != 1, child: DiscoverScreen()),
+          Offstage(
+            offstage: _selectedIndex != 0,
+            child: const VideoTimelineScreen(),
+          ),
+          Offstage(
+            offstage: _selectedIndex != 1,
+            child: const DiscoverScreen(),
+          ),
           Offstage(offstage: _selectedIndex != 3, child: Container()),
           Offstage(offstage: _selectedIndex != 4, child: Container()),
         ],
@@ -48,7 +54,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
       bottomNavigationBar: BottomAppBar(
         color: _selectedIndex == 0 ? Colors.black : Colors.white,
         child: Padding(
-          padding: EdgeInsets.all(Sizes.size1),
+          padding: const EdgeInsets.all(Sizes.size1),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

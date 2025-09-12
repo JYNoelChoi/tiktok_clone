@@ -17,8 +17,11 @@ class TikTokApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
-        primaryColor: Color(0xFFE9435A),
-        appBarTheme: AppBarTheme(
+        primaryColor: const Color(0xFFE9435A),
+        textSelectionTheme: const TextSelectionThemeData(
+          cursorColor: Color(0xFFE9435A),
+        ),
+        appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
           elevation: 0,
@@ -31,7 +34,7 @@ class TikTokApp extends StatelessWidget {
       ),
       // TODO: Just to facilitate working on specific screen. To restore later.
       // home: SignUpScreen(),
-      home: MainNavigationScreen(),
+      home: const MainNavigationScreen(),
     );
   }
 }

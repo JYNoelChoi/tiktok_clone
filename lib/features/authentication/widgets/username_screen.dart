@@ -35,7 +35,7 @@ class _UsernameScreenState extends State<UsernameScreen> {
     if (_username.isEmpty) return;
     Navigator.of(
       context,
-    ).push(MaterialPageRoute(builder: (context) => EmailScreen()));
+    ).push(MaterialPageRoute(builder: (context) => const EmailScreen()));
   }
 
   @override
@@ -48,7 +48,7 @@ class _UsernameScreenState extends State<UsernameScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Gaps.v40,
-            Text(
+            const Text(
               "Create username",
               style: TextStyle(
                 fontSize: Sizes.size24,
@@ -56,7 +56,7 @@ class _UsernameScreenState extends State<UsernameScreen> {
               ),
             ),
             Gaps.v8,
-            Text(
+            const Text(
               "You can always change this later.",
               style: TextStyle(fontSize: Sizes.size16, color: Colors.black54),
             ),

@@ -12,7 +12,7 @@ class _VideoTimelineScreenState extends State<VideoTimelineScreen> {
   int _itemCount = 4;
   final PageController _pageController = PageController();
   final _scrollCurve = Curves.linear;
-  final _scrollDuration = Duration(milliseconds: 150);
+  final _scrollDuration = const Duration(milliseconds: 150);
 
   // List<Color> colors = [Colors.blue, Colors.red, Colors.yellow, Colors.teal];
 
@@ -35,7 +35,7 @@ class _VideoTimelineScreenState extends State<VideoTimelineScreen> {
   }
 
   Future<void> _onRefresh() {
-    return Future.delayed(Duration(seconds: 5));
+    return Future.delayed(const Duration(seconds: 5));
   }
 
   @override

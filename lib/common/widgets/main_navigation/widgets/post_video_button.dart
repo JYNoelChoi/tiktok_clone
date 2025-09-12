@@ -23,10 +23,10 @@ class _PostVideoButtonState extends State<PostVideoButton> {
             height: 30,
             width: 25,
             decoration: BoxDecoration(
-              color: Color(0xff61d4f0),
+              color: const Color(0xff61d4f0),
               borderRadius: BorderRadius.circular(Sizes.size8),
             ),
-            padding: EdgeInsets.symmetric(horizontal: Sizes.size8),
+            padding: const EdgeInsets.symmetric(horizontal: Sizes.size8),
           ),
         ),
         Positioned(
@@ -38,12 +38,12 @@ class _PostVideoButtonState extends State<PostVideoButton> {
               color: Theme.of(context).primaryColor,
               borderRadius: BorderRadius.circular(Sizes.size8),
             ),
-            padding: EdgeInsets.symmetric(horizontal: Sizes.size8),
+            padding: const EdgeInsets.symmetric(horizontal: Sizes.size8),
           ),
         ),
         Container(
           height: 30,
-          padding: EdgeInsets.symmetric(horizontal: Sizes.size12),
+          padding: const EdgeInsets.symmetric(horizontal: Sizes.size12),
           decoration: BoxDecoration(
             color: widget.inverted ? Colors.black : Colors.white,
             borderRadius: BorderRadius.circular(Sizes.size6),
