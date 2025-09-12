@@ -67,7 +67,7 @@ class _EmailScreenState extends State<EmailScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Gaps.v40,
-              Text(
+              const Text(
                 "What's your email?",
                 style: TextStyle(
                   fontSize: Sizes.size24,

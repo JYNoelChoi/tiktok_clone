@@ -73,7 +73,7 @@ class _InterestsScreenState extends State<InterestsScreen> {
   void _onNextTap() {
     Navigator.of(
       context,
-    ).push(MaterialPageRoute(builder: (context) => TutorialScreen()));
+    ).push(MaterialPageRoute(builder: (context) => const TutorialScreen()));
   }
 
   @override
@@ -94,8 +94,8 @@ class _InterestsScreenState extends State<InterestsScreen> {
       appBar: AppBar(
         title: AnimatedOpacity(
           opacity: _showTitle ? 1 : 0,
-          duration: Duration(milliseconds: 300),
-          child: Text("Choose your interests"),
+          duration: const Duration(milliseconds: 300),
+          child: const Text("Choose your interests"),
         ),
       ),
       body: Scrollbar(
@@ -103,7 +103,7 @@ class _InterestsScreenState extends State<InterestsScreen> {
         child: SingleChildScrollView(
           controller: _scrollController,
           child: Padding(
-            padding: EdgeInsetsGeometry.only(
+            padding: const EdgeInsetsGeometry.only(
               top: Sizes.size24,
               bottom: Sizes.size16,
               left: Sizes.size24,
@@ -113,14 +113,14 @@ class _InterestsScreenState extends State<InterestsScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Gaps.v32,
-                Text(
+                const Text(
                   "Choose your interests",
                   style: TextStyle(
                     fontSize: Sizes.size40,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Text(
+                const Text(
                   "Get better video recommendations",
                   style: TextStyle(fontSize: Sizes.size20),
                 ),
@@ -144,7 +144,7 @@ class _InterestsScreenState extends State<InterestsScreen> {
           // height: MediaQuery.of(context).size.height * 0.2,
           elevation: 2,
           child: Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               bottom: Sizes.size20,
               top: Sizes.size1,
               left: Sizes.size24,
@@ -153,7 +153,7 @@ class _InterestsScreenState extends State<InterestsScreen> {
             child: GestureDetector(
               onTap: _onNextTap,
               child: Container(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   vertical: Sizes.size16 + Sizes.size2,
                 ),
                 decoration: BoxDecoration(

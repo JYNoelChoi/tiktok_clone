@@ -32,7 +32,7 @@ class _BirthdayScreenState extends State<BirthdayScreen> {
   void _onNextTap() {
     Navigator.of(
       context,
-    ).push(MaterialPageRoute(builder: (context) => InterestsScreen()));
+    ).push(MaterialPageRoute(builder: (context) => const InterestsScreen()));
   }
 
   void _setTextFieldDate(DateTime date) {
@@ -55,7 +55,7 @@ class _BirthdayScreenState extends State<BirthdayScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Gaps.v40,
-            Text(
+            const Text(
               "When's your birthday?",
               style: TextStyle(
                 fontSize: Sizes.size24,
@@ -63,7 +63,7 @@ class _BirthdayScreenState extends State<BirthdayScreen> {
               ),
             ),
             Gaps.v8,
-            Text(
+            const Text(
               "Your birthday won't be shown publicy.",
               style: TextStyle(fontSize: Sizes.size16, color: Colors.black54),
             ),
@@ -84,7 +84,7 @@ class _BirthdayScreenState extends State<BirthdayScreen> {
             Gaps.v28,
             GestureDetector(
               onTap: _onNextTap,
-              child: FormButton(disabled: false),
+              child: const FormButton(disabled: false),
             ),
           ],
         ),

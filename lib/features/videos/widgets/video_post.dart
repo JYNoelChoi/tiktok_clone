@@ -24,7 +24,7 @@ class VideoPost extends StatefulWidget {
 class _VideoPostState extends State<VideoPost>
     with SingleTickerProviderStateMixin {
   bool _isPaused = false;
-  final Duration _animationDuration = Duration(milliseconds: 200);
+  final Duration _animationDuration = const Duration(milliseconds: 200);
   late final AnimationController _animationController;
 
   late VideoPlayerController _videoPlayerController;
@@ -74,6 +74,9 @@ class _VideoPostState extends State<VideoPost>
         !_videoPlayerController.value.isPlaying) {
       _videoPlayerController.play();
     }
+    if (_videoPlayerController.value.isPlaying && info.visibleFraction == 0) {
+      _videoPlayerController.pause();
+    }
   }
 
   void _onTogglePause() {
@@ -97,7 +100,7 @@ class _VideoPostState extends State<VideoPost>
       context: context,
       isScrollControlled: true,
       backgroundColor: Colors.transparent,
-      builder: (context) => VideoComments(),
+      builder: (context) => const VideoComments(),
     );
     _onTogglePause();
   }
@@ -106,7 +109,7 @@ class _VideoPostState extends State<VideoPost>
   Widget build(BuildContext context) {
     // print(_animationController.value);
     return VisibilityDetector(
-      key: Key("{widget.index}"),
+      key: const Key("{widget.index}"),
       onVisibilityChanged: _onVisibilityChanged,
       child: Stack(
         children: [
@@ -130,7 +133,7 @@ class _VideoPostState extends State<VideoPost>
                   child: AnimatedOpacity(
                     opacity: _isPaused ? 1 : 0,
                     duration: _animationDuration,
-                    child: FaIcon(
+                    child: const FaIcon(
                       FontAwesomeIcons.play,
                       size: Sizes.size52,
                       color: Colors.white,
@@ -140,7 +143,7 @@ class _VideoPostState extends State<VideoPost>
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             bottom: 20,
             left: 10,
             child: Column(
@@ -167,7 +170,7 @@ class _VideoPostState extends State<VideoPost>
             right: 10,
             child: Column(
               children: [
-                CircleAvatar(
+                const CircleAvatar(
                   radius: 25,
                   backgroundColor: Colors.black,
                   foregroundColor: Colors.white,
@@ -179,7 +182,7 @@ class _VideoPostState extends State<VideoPost>
                 Gaps.v24,
                 GestureDetector(
                   onDoubleTap: () {},
-                  child: VideoButton(
+                  child: const VideoButton(
                     text: "2.9M",
                     icon: FontAwesomeIcons.solidHeart,
                   ),
@@ -187,13 +190,13 @@ class _VideoPostState extends State<VideoPost>
                 Gaps.v24,
                 GestureDetector(
                   onTap: () => _onCommentTap(context),
-                  child: VideoButton(
+                  child: const VideoButton(
                     text: "33K",
                     icon: FontAwesomeIcons.solidComment,
                   ),
                 ),
                 Gaps.v24,
-                VideoButton(text: "Share", icon: FontAwesomeIcons.share),
+                const VideoButton(text: "Share", icon: FontAwesomeIcons.share),
               ],
             ),
           ),

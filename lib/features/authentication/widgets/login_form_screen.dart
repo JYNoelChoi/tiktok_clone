@@ -21,9 +21,9 @@ class _LoginFormScreenState extends State<LoginFormScreen> {
         // triggers onSave calleback
         _formKey.currentState!.save();
         // print(_formData);
-        Navigator.of(
-          context,
-        ).push(MaterialPageRoute(builder: (context) => InterestsScreen()));
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => const InterestsScreen()),
+        );
       }
     }
     // _formKey.currentState?.validate();
@@ -32,15 +32,15 @@ class _LoginFormScreenState extends State<LoginFormScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Loig in")),
+      appBar: AppBar(title: const Text("Loig in")),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: Sizes.size36),
+        padding: const EdgeInsets.symmetric(horizontal: Sizes.size36),
         child: Form(
           key: _formKey,
           child: Column(
             children: [
               TextFormField(
-                decoration: InputDecoration(hintText: "Email"),
+                decoration: const InputDecoration(hintText: "Email"),
                 validator: (value) {
                   if (value != null && value.isEmpty) {
                     return "Please write your email";
@@ -64,13 +64,13 @@ class _LoginFormScreenState extends State<LoginFormScreen> {
                 onSaved: (newValue) => {
                   if (newValue != null) {_formData["password"] = newValue},
                 },
-                decoration: InputDecoration(hintText: "Password"),
+                decoration: const InputDecoration(hintText: "Password"),
                 obscureText: false,
               ),
               Gaps.v28,
               GestureDetector(
                 onTap: onSubmitTap,
-                child: FormButton(disabled: false),
+                child: const FormButton(disabled: false),
               ),
             ],
           ),

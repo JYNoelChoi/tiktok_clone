@@ -8,6 +8,7 @@ class NavigationTab extends StatelessWidget {
   final IconData icon;
   final IconData selectedIcon;
   final Function onTap;
+  final int selectedIndex;
 
   const NavigationTab({
     super.key,
@@ -16,6 +17,7 @@ class NavigationTab extends StatelessWidget {
     required this.icon,
     required this.onTap,
     required this.selectedIcon,
+    required this.selectedIndex,
   });
 
   @override
@@ -24,15 +26,23 @@ class NavigationTab extends StatelessWidget {
       child: GestureDetector(
         onTap: () => onTap(),
         child: Container(
-          color: Colors.black,
+          color: selectedIndex == 0 ? Colors.black : Colors.white,
           child: AnimatedOpacity(
             opacity: isSelected ? 1 : 0.5,
             duration: const Duration(milliseconds: 200),
             child: Column(
               children: [
-                FaIcon(isSelected ? selectedIcon : icon, color: Colors.white),
+                FaIcon(
+                  isSelected ? selectedIcon : icon,
+                  color: selectedIndex == 0 ? Colors.white : Colors.black,
+                ),
                 Gaps.v5,
-                Text(text, style: TextStyle(color: Colors.white)),
+                Text(
+                  text,
+                  style: TextStyle(
+                    color: selectedIndex == 0 ? Colors.white : Colors.black,
+                  ),
+                ),
               ],
             ),
           ),

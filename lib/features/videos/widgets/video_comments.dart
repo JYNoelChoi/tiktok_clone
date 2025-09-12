@@ -45,12 +45,12 @@ class _VideoCommentsState extends State<VideoComments> {
         backgroundColor: Colors.grey.shade50,
         appBar: AppBar(
           backgroundColor: Colors.grey.shade50,
-          title: Text("22796 comments"),
+          title: const Text("22796 comments"),
           automaticallyImplyLeading: false,
           actions: [
             IconButton(
               onPressed: _onClosePressed,
-              icon: FaIcon(FontAwesomeIcons.xmark),
+              icon: const FaIcon(FontAwesomeIcons.xmark),
             ),
           ],
         ),
@@ -62,7 +62,7 @@ class _VideoCommentsState extends State<VideoComments> {
                 controller: _scrollController,
                 child: ListView.separated(
                   controller: _scrollController,
-                  padding: EdgeInsets.only(
+                  padding: const EdgeInsets.only(
                     top: Sizes.size10,
                     left: Sizes.size16,
                     right: Sizes.size16,
@@ -73,7 +73,7 @@ class _VideoCommentsState extends State<VideoComments> {
                   itemBuilder: (context, index) => Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      CircleAvatar(radius: 18, child: Text("GM")),
+                      const CircleAvatar(radius: 18, child: Text("GM")),
                       Gaps.h10,
                       Expanded(
                         child: Column(
@@ -88,7 +88,7 @@ class _VideoCommentsState extends State<VideoComments> {
                               ),
                             ),
                             Gaps.v3,
-                            Text(
+                            const Text(
                               "That's not it I've seen the same thing but also in a cave."
                               "That'sve.",
                             ),
@@ -118,7 +118,7 @@ class _VideoCommentsState extends State<VideoComments> {
                 bottom: MediaQuery.of(context).viewInsets.bottom,
                 width: size.width,
                 child: BottomAppBar(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     vertical: Sizes.size10,
                     horizontal: Sizes.size10,
                   ),
@@ -135,7 +135,7 @@ class _VideoCommentsState extends State<VideoComments> {
                           radius: 18,
                           backgroundColor: Colors.grey.shade500,
                           foregroundColor: Colors.white,
-                          child: Text("GM"),
+                          child: const Text("GM"),
                         ),
                         Gaps.h10,
                         Expanded(
@@ -148,7 +148,9 @@ class _VideoCommentsState extends State<VideoComments> {
                             cursorColor: Theme.of(context).primaryColor,
                             decoration: InputDecoration(
                               suffixIcon: Padding(
-                                padding: EdgeInsets.only(right: Sizes.size14),
+                                padding: const EdgeInsets.only(
+                                  right: Sizes.size14,
+                                ),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   mainAxisAlignment: MainAxisAlignment.end,
@@ -193,7 +195,7 @@ class _VideoCommentsState extends State<VideoComments> {
                               hintStyle: TextStyle(color: Colors.grey.shade500),
                               filled: true,
                               fillColor: Colors.grey.shade200,
-                              contentPadding: EdgeInsets.symmetric(
+                              contentPadding: const EdgeInsets.symmetric(
                                 vertical: Sizes.size12,
                                 horizontal: Sizes.size12,
                               ),

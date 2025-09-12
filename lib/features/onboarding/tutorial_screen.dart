@@ -55,7 +55,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
           padding: const EdgeInsets.symmetric(horizontal: Sizes.size24),
           child: SafeArea(
             child: AnimatedCrossFade(
-              firstChild: Column(
+              firstChild: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Gaps.v80,
@@ -74,7 +74,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
                   ),
                 ],
               ),
-              secondChild: Column(
+              secondChild: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Gaps.v80,
@@ -95,7 +95,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
               crossFadeState: _showingPage == Page.first
                   ? CrossFadeState.showFirst
                   : CrossFadeState.showSecond,
-              duration: Duration(milliseconds: 300),
+              duration: const Duration(milliseconds: 300),
             ),
           ),
         ),
@@ -105,13 +105,13 @@ class _TutorialScreenState extends State<TutorialScreen> {
             color: Colors.white,
             elevation: 0,
             child: Padding(
-              padding: EdgeInsetsGeometry.symmetric(
+              padding: const EdgeInsetsGeometry.symmetric(
                 vertical: Sizes.size10,
                 horizontal: Sizes.size24,
               ),
               child: AnimatedOpacity(
                 opacity: _showingPage == Page.first ? 0 : 1,
-                duration: Duration(milliseconds: 300),
+                duration: const Duration(milliseconds: 300),
                 child: CupertinoButton(
                   color: Theme.of(context).primaryColor,
                   onPressed: () {},

@@ -70,7 +70,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Gaps.v40,
-              Text(
+              const Text(
                 "Password",
                 style: TextStyle(
                   fontSize: Sizes.size24,
@@ -120,7 +120,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                 ),
               ),
               Gaps.v10,
-              Text(
+              const Text(
                 "Your password must have: ",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
@@ -135,7 +135,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                         : Colors.grey.shade400,
                   ),
                   Gaps.h5,
-                  Text("8 to 20 characters"),
+                  const Text("8 to 20 characters"),
                 ],
               ),
               Gaps.v28,
